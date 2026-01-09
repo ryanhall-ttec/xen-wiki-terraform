@@ -13,7 +13,6 @@ help:
 export-ips:
 	@echo "Exporting IPs from Terraform state..."
 	@echo "APPLICATION_IP := $$(terraform output -raw application_ip)" > Makefile.env
-	@echo "DATABASE_HOST := $$(terraform output -raw database_ipv4)" >> Makefile.env
 	@echo "SSH_PORT := $$(terraform output -raw ssh_port)" >> Makefile.env
 	@echo "SSH_USER := $$(terraform output -raw ssh_user)" >> Makefile.env
 	@echo "IPs and database host exported to Makefile.env"
